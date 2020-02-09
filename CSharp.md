@@ -9,6 +9,46 @@ var currentPerformanceCounterCategory = new System.Diagnostics.
 
 You do not have to change the names of objects that were created by using the Visual Studio designer tools to make them fit other guidelines.
 
+## Naming Conventions
+
+The Microsoft [naming](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines) and [capitalization](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/capitalization-conventions) guidelines should be followed.
+
+### Capitalising acronyms
+
+Remember to apply proper naming conventions to any acronyms present in project names.
+
+**DO** capitalise both characters on two-character acronyms, except the first word of a camel-cased identifier.  Do not confuse acronyms with abbreviations.  Abbreviations of "identifier" and "database" should be capitalised as "Id" and "Db" respectively.
+
+```csharp
+System.IO
+public void StartIO(Stream ioStream)
+```
+
+**DO** capitalise only the first character of acronyms, except the first word of a camel-cased identifier.
+
+```csharp
+System.Xml
+public void ProcessHtmlTag(string htmlTag)
+```
+
+**DO NOT** capitalise any of the characters of any acronyms, whatever their length, at the beginning of a camel-cased identifier.
+
+```csharp
+var xmlDocument = new XmlDocument();
+var ioStream = new Stream();
+var htmlClient = new HtmlClient();
+```
+
+Remember to follow the [namespace guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/names-of-namespaces).
+
+For most APIs the following pattern will be appropriate for naming:
+
+`OrganisationName.ProductName.Feature.Api`
+
+Example:
+
+`Codidact.InstanceManagement.Deployment.Api`
+
 ## Layout Conventions
 Good layout uses formatting to emphasize the structure of your code and to make the code easier to read. Microsoft examples and samples conform to the following conventions:
 
